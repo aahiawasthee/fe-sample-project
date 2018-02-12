@@ -16,17 +16,19 @@
                 <h2 class="main_title text_inline">Cart.ly</h2>
                 <h4 class="main_title text_inline"><a href="#" class="shop_link">Shop</a></h4> </div>
             <div class="right_text text_inline">
-                <p class="text_inline"><a href="#" class="cart_link">Your Cart</a></p>
+                <div id="overlay" onclick="off()"></div>
+                <p class="text_inline"><a href="#" onclick="on()" class="cart_link">Your Cart</a></p>
                 <div class="text_inline">
-                    <input type="submit" value="0" id="cart_counter"> </div>
+                    <input type="submit" value="0" id="cartitem_counter"> </div>
             </div>
         </header>
     </div>
     <div class="products_area">
-        <div class="container-fluid" id="cart_overlay"> </div>
+        <div class="container-fluid" id="overlay"> </div>
         <h2 class="heading_title">Shop our featured collection</h2>
         <div id="product_boxes"> </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,11 @@
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
 function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -28,8 +36,9 @@ loadJSON(function (response) {
         var price = document.createElement("div");
         price.setAttribute("class", "clothes_price");
         var cart = document.createElement("input");
-        cart.setAttribute("class", "add_to_cart");
-        cart.setAttribute("type", "submit");
+        cart.setAttribute("id", "add_to_cart");
+        cart.setAttribute("name", "add_to_cart");
+        cart.setAttribute("type", "button");
         cart.setAttribute("value", "Add to cart");
         outerdiv.appendChild(innerdiv);
         innerdiv.appendChild(img);
